@@ -48,7 +48,7 @@ are optional.
 ## PowerDNS Configuration
 
 If you have a need to configure PowerDNS in a particular way, you can mount
-a configuration directory on `/etc/pdns/pdns.docker.d` containing `.conf` files
+a configuration directory on `/etc/pdns/pdns.d` containing `.conf` files
 with configuration directives.
 
 

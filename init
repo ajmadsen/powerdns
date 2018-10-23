@@ -13,27 +13,27 @@ fi
 
 # Set PgSQL config
 if [ -n "$PGSQL_HOST" ]; then
-	sed -r -i "s/^[# ]*gpgsql-host=.*/gpgsql-host=${PGSQL_HOST}/g"             /etc/powerdns/pdns.d/pdns.local.gpgsql.conf
+	sed -r -i "s/^[# ]*gpgsql-host=.*/gpgsql-host=${PGSQL_HOST}/g"             /etc/powerdns/pdns.conf
 fi
 
 if [ -n "$PGSQL_PORT" ]; then
-	sed -r -i "s/^[# ]*gpgsql-port=.*/gpgsql-port=${PGSQL_PORT}/g"             /etc/powerdns/pdns.d/pdns.local.gpgsql.conf
+	sed -r -i "s/^[# ]*gpgsql-port=.*/gpgsql-port=${PGSQL_PORT}/g"             /etc/powerdns/pdns.conf
 fi
 
 if [ -n "$PGSQL_USERNAME" ]; then
-	sed -r -i "s/^[# ]*gpgsql-user=.*/gpgsql-user=${PGSQL_USERNAME}/g"         /etc/powerdns/pdns.d/pdns.local.gpgsql.conf
+	sed -r -i "s/^[# ]*gpgsql-user=.*/gpgsql-user=${PGSQL_USERNAME}/g"         /etc/powerdns/pdns.conf
 fi
 
 if [ -n "$PGSQL_PASSWORD" ]; then
-	sed -r -i "s/^[# ]*gpgsql-password=.*/gpgsql-password=${PGSQL_PASSWORD}/g" /etc/powerdns/pdns.d/pdns.local.gpgsql.conf
+	sed -r -i "s/^[# ]*gpgsql-password=.*/gpgsql-password=${PGSQL_PASSWORD}/g" /etc/powerdns/pdns.conf
 fi
 
 if [ -n "$PGSQL_DATABASE" ]; then
-	sed -r -i "s/^[# ]*gpgsql-dbname=.*/gpgsql-dbname=${PGSQL_DATABASE}/g"     /etc/powerdns/pdns.d/pdns.local.gpgsql.conf
+	sed -r -i "s/^[# ]*gpgsql-dbname=.*/gpgsql-dbname=${PGSQL_DATABASE}/g"     /etc/powerdns/pdns.conf
 fi
 
 if [ -n "$PGSQL_DNSSEC" ]; then
-	sed -r -i "s/^[# ]*gpgsql-dnssec=.*/gpgsql-dnssec=${PGSQL_DNSSEC}/g"     /etc/powerdns/pdns.d/pdns.local.gpgsql.conf
+	sed -r -i "s/^[# ]*gpgsql-dnssec=.*/gpgsql-dnssec=${PGSQL_DNSSEC}/g"       /etc/powerdns/pdns.conf
 fi
 
 unset -v PGSQL_PASSWORD
