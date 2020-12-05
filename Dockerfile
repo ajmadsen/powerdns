@@ -1,6 +1,4 @@
-# Stick to libressl 2.6
-# https://github.com/PowerDNS/pdns/issues/6943
-FROM debian:stretch
+FROM debian:bullseye
 
 RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive \
@@ -11,6 +9,5 @@ ADD pdns.conf /etc/powerdns/
 ADD init /sbin/
 
 EXPOSE 53/tcp 53/udp
-LABEL org.discourse.service._domain.port=53 org.discourse.service._domain.protocol=both
 
 ENTRYPOINT ["/sbin/init"]
